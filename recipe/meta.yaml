@@ -11,7 +11,7 @@ source:
   sha256: 00aa2a87d516f172c4ce3407f1ed63d515241b4b9e7b2ad0ff3d8a3a77c21eda
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -29,8 +29,8 @@ requirements:
     - setuptools
     - wheel
   run:
-    - cirq-core ~=0.12.0
-    - cirq-google ~=0.12.0
+    - cirq-core >=0.12,=0.12
+    - cirq-google >=0.12.0,=0.12
     - cython
     - jupyter
     - {{ pin_compatible('numpy') }}
