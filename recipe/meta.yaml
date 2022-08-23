@@ -1,5 +1,5 @@
 {% set name = "fqe" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 
 package:
@@ -8,11 +8,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fqe-{{ version }}.tar.gz
-  sha256: 00aa2a87d516f172c4ce3407f1ed63d515241b4b9e7b2ad0ff3d8a3a77c21eda
+  sha256: 7aadb5292253ad82dd282a7e9d773134787e05e267ea8c995f5d9ce060074518
 
 build:
-  number: 1
-  skip: True  # [win]
+  number: 0
+  skip: true  # [win or py==37]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -29,12 +29,12 @@ requirements:
     - setuptools
     - wheel
   run:
-    - cirq-core >=0.12,=0.12
-    - cirq-google >=0.12.0,=0.12
+    - cirq-core >=0.15.0
+    - cirq-google >=0.15.0
     - cython
     - jupyter
     - {{ pin_compatible('numpy') }}
-    - openfermion >=1.2.0
+    - openfermion >=1.5.0
     - pyasn1-modules ==0.2.7
     - python
     - scipy
