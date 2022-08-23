@@ -12,7 +12,7 @@ source:
 
 build:
   number: 0
-  skip: true  # [win]
+  skip: true  # [win or py==37]
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -39,7 +39,6 @@ requirements:
     - python
     - scipy
     - sphinx >=2.3.1
-    - typing-extensions ==3.10.0  # [py!=37]
 
 test:
   imports:
