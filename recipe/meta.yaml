@@ -39,6 +39,8 @@ requirements:
     - python
     - scipy
     - sphinx >=2.3.1
+  run_constrained:
+    - typing-extensions ==3.10.0
 
 test:
   imports:
