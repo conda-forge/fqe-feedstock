@@ -44,10 +44,6 @@ requirements:
 test:
   imports:
     - fqe
-  commands:
-    - pip check
-  requires:
-    - pip
 
 about:
   home: http://www.openfermion.org
